@@ -10,11 +10,15 @@ import { SpotifyService } from 'src/app/services/spotify.service';
 })
 export class HomeComponent {
 
-
+  nuevasCanciones:any[] = []
 
   constructor(private spotify: SpotifyService) {  // inyecta el spotify service
 
-    this.spotify.getNewReleases()
+    this.spotify.getNewReleases()          //llama al servicio
+    .subscribe((data:any) =>{                //  se suscribe a cualquier dato que pasa dato http no sabemos tipo
+      console.log(data.albums.items)
+      this.nuevasCanciones =data.albums.items // nuevas canciones = Data
+    })
   }
 
 
