@@ -5,13 +5,17 @@ import { HttpClient, HttpHeaders } from '@angular/common/http'; // importar los 
 
 import { map } from 'rxjs/operators'
 
+
+
 @Injectable({
   providedIn: 'root' // llamada automatica no es necesario el import 
 })
 export class SpotifyService {
 
+ 
   constructor(private http: HttpClient) {
 
+   
 
     console.log("servicio de spotify")
   }

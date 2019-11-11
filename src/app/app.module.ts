@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 //Import de Module
 import{RouterModule} from '@angular/router';
 
-//import de Modulo de Language
+//import de Modulo de Spotify
 import{HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
