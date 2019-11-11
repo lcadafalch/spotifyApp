@@ -18,7 +18,7 @@ export class SpotifyService {
   getNewReleases() {                                        // petición HTTP de la api de Spotify 
 
     const headers = new HttpHeaders({                    // enviar los header necesarios
-      'Authorization': 'Bearer BQAPjeGkhuZC17mppN4mpQUYW1w_F1FET9k0nC7rsLxFIjQaP8YMY33vZ9YSFaOADy2dzkVSVEOKy-ppnpk'
+      'Authorization': 'Bearer BQDJ-BEP9TZ-Ms_k2tSyApXEulEonwVo_9sGmeP4TkuOpmwGaUBRj4BkDMa5AzlFKiT_NsoxMnCTPpDpJg4'
     });                                        // enviar autorización para tener autenticar token
 
     return this.http.get('https://api.spotify.com/v1/browse/new-releases', { headers }) // enviar headers /*?limit=5*/
