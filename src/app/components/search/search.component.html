@@ -1,1 +1,31 @@
-<p>search works!</p>
+<div class="row">
+    <div class="col"></div>
+    <input #termino type="text" (keyup)="buscar(termino.value)" class="form-control" placeholder=" Buscar artista">
+    <!-- termino = getElementbyId.value   keyup -->
+
+
+</div>
+
+<div class="card-columns">
+
+    <div *ngFor="let artista of artistas " class="card">
+        <!--Bucle for de canciones -->
+        <img class="card-img-top" [src]="artista.images[0].url" alt="Card image cap">
+        <!--imagen -->
+        <div class="card-body">
+
+            <h5 class="card-title">
+
+                {{artista.name}}
+                <!--posicion de la canción en la Api -->
+            </h5>
+            <p class="card-text">
+
+
+
+                <!-- Bucle for de los artistas  -->
+
+            </p>
+        </div>
+    </div>
+</div>

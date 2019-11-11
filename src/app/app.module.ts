@@ -16,7 +16,9 @@ import { SearchComponent } from './components/search/search.component';
 import{ROUTES} from './app.routes'
 
 //services
-import{SpotifyService} from './services/spotify.service' // importa el servicio de spoty
+import{SpotifyService} from './services/spotify.service';
+import { TarjetasComponent } from './components/tarjetas/tarjetas.component';
+import { LoadingComponent } from './components/shared/loading/loading.component' // importa el servicio de spoty
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import{SpotifyService} from './services/spotify.service' // importa el servicio 
     HomeComponent,
     ArtistaComponent,
     NavbarComponent,
-    SearchComponent
+    SearchComponent,
+    TarjetasComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,

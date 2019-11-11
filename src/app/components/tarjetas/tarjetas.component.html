@@ -1,0 +1,21 @@
+<div class="card-columns m-5 animated fadeIn">
+
+        <div (click)="verArtista(item)" *ngFor = "let item of items "class="card puntero">  <!--Bucle for de canciones -->
+             <img class="card-img-top" [src]="item.images[0].url" alt="Card image cap"> <!--imagen -->
+            <div class="card-body">
+    
+                <h5 class="card-title">
+       
+                     {{item.name}}  <!--posicion de la canción en la Api -->
+                </h5>
+                <p class="card-text">
+                
+                        <span *ngFor ="let artista of item.artists"class="badge badge-pill badge-primary">
+                            {{artista.name}}</span>
+                            
+                            <!-- Bucle for de los artistas  -->
+    
+                </p>
+            </div>
+        </div>
+    </div>
