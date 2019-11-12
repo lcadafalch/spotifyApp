@@ -12,17 +12,17 @@ import { map } from 'rxjs/operators'
 })
 export class SpotifyService {
 
- 
+
   constructor(private http: HttpClient) {
 
-   
+
 
     console.log("servicio de spotify")
   }
   getNewReleases() {                                        // petición HTTP de la api de Spotify 
 
     const headers = new HttpHeaders({                    // enviar los header necesarios
-      'Authorization': 'Bearer BQDJ-BEP9TZ-Ms_k2tSyApXEulEonwVo_9sGmeP4TkuOpmwGaUBRj4BkDMa5AzlFKiT_NsoxMnCTPpDpJg4'
+      'Authorization': 'Bearer BQCvIglKilm2b-dqBdFS1LDo3PKays8DxM8ZeQBCyfwVI2A4UFOQigHv8O04_jJ5WWA6qmL9wfQjueBhR_g'
     });                                        // enviar autorización para tener autenticar token
 
     return this.http.get('https://api.spotify.com/v1/browse/new-releases', { headers }) // enviar headers /*?limit=5*/
@@ -40,31 +40,29 @@ export class SpotifyService {
     return this.http.get(`https://api.spotify.com/v1/search?type=${termino}&limit=15`, { headers })
 
     //  peticion get , para buscar a partir de un valor puesto por el usuario
-  } 
-    getArtista(id:string) {
-       
-      const headers = new HttpHeaders({     
+  }
+  getArtista(id: string) {
+
+    const headers = new HttpHeaders({
       'Authorization': 'Bearer BQAPjeGkhuZC17mppN4mpQUYW1w_F1FET9k0nC7rsLxFIjQaP8YMY33vZ9YSFaOADy2dzkVSVEOKy-ppnpk'
-    }); 
+    });
 
-      return this.http.get(`https://api.spotify.com/v1/artists/${id}`, { headers})
-
+    return this.http.get(`https://api.spotify.com/v1/artists/${id}`, { headers })
 
   }
 
   // peticion get de lo mejor de cada artista
 
-  getTopTracks(id:string) {
-       
-    const headers = new HttpHeaders({     
-    'Authorization': 'Bearer BQAPjeGkhuZC17mppN4mpQUYW1w_F1FET9k0nC7rsLxFIjQaP8YMY33vZ9YSFaOADy2dzkVSVEOKy-ppnpk'
-  }); 
+  getTopTracks(id: string) {
 
-    return this.http.get(`https://api.spotify.com/v1/artists/${id}/top-tracks?country=us`, { headers})
+    const headers = new HttpHeaders({
+      'Authorization': 'Bearer BQAPjeGkhuZC17mppN4mpQUYW1w_F1FET9k0nC7rsLxFIjQaP8YMY33vZ9YSFaOADy2dzkVSVEOKy-ppnpk'
+    });
 
+    return this.http.get(`https://api.spotify.com/v1/artists/${id}/top-tracks?country=us`, { headers })
 
-}
-
-
+  }
 
 }
+
+
